@@ -2,13 +2,16 @@
 	import { onMount } from 'svelte';
 	import { goto } from '$app/navigation';
 	import AnimationCard from '$lib/components/AnimationCard.svelte';
-	import CodeModal from '$lib/components/CodeModal.svelte';
-	import InstallationGuide from '$lib/components/InstallationGuide.svelte';
-	import BackgroundEffects from '$lib/components/BackgroundEffects.svelte';
+	// Lazy load heavy components
 	import Footer from '$lib/components/Footer.svelte';
 	import { animations } from '$lib/animations/index.js';
 	import { searchAnimations, getAnimationsByCategory } from '$lib/utils/animationHelpers.js';
 	import { Search, BookOpen, Home, Menu, X } from 'lucide-svelte';
+
+	// Dynamic imports for better performance
+	let CodeModal;
+	let InstallationGuide;
+	let BackgroundEffects;
 
 	let searchTerm = '';
 	let activeCategory = 'attention';
@@ -88,8 +91,23 @@
 		sidebarOpen = !sidebarOpen;
 	}
 
-	onMount(() => {
+	onMount(async () => {
 		mounted = true;
+
+		// Lazy load heavy components only when needed
+		const [
+			{ default: BackgroundEffectsComponent },
+			{ default: CodeModalComponent },
+			{ default: InstallationGuideComponent }
+		] = await Promise.all([
+			import('$lib/components/BackgroundEffects.svelte'),
+			import('$lib/components/CodeModal.svelte'),
+			import('$lib/components/InstallationGuide.svelte')
+		]);
+
+		BackgroundEffects = BackgroundEffectsComponent;
+		CodeModal = CodeModalComponent;
+		InstallationGuide = InstallationGuideComponent;
 	});
 </script>
 
@@ -102,7 +120,9 @@
 </svelte:head>
 
 <div class="min-h-screen bg-gray-900 text-white">
-	<BackgroundEffects />
+	{#if BackgroundEffects}
+		<svelte:component this={BackgroundEffects} />
+	{/if}
 
 	<!-- Mobile Header -->
 	<header
@@ -294,15 +314,19 @@
 </div>
 
 <!-- Modals -->
-{#if selectedAnimation}
-	<CodeModal animation={selectedAnimation} on:close={() => (selectedAnimation = null)} />
+{#if selectedAnimation && CodeModal}
+	<svelte:component
+		this={CodeModal}
+		animation={selectedAnimation}
+		on:close={() => (selectedAnimation = null)}
+	/>
 {/if}
 
-{#if showInstallation}
-	<InstallationGuide on:close={() => (showInstallation = false)} />
+{#if showInstallation && InstallationGuide}
+	<svelte:component this={InstallationGuide} on:close={() => (showInstallation = false)} />
 {/if}
 
 <!-- Global Modal -->
-{#if showModal && selectedAnimation}
-	<CodeModal bind:isOpen={showModal} animation={selectedAnimation} />
+{#if showModal && selectedAnimation && CodeModal}
+	<svelte:component this={CodeModal} bind:isOpen={showModal} animation={selectedAnimation} />
 {/if}

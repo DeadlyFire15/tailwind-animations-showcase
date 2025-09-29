@@ -2,7 +2,7 @@
 	import { onMount } from 'svelte';
 	import { goto } from '$app/navigation';
 	import Footer from '$lib/components/Footer.svelte';
-	import BackgroundEffects from '$lib/components/BackgroundEffects.svelte';
+	// Lazy load BackgroundEffects for better performance
 	import ReactIcon from '$lib/components/icons/ReactIcon.svelte';
 	import VueIcon from '$lib/components/icons/VueIcon.svelte';
 	import SvelteIcon from '$lib/components/icons/SvelteIcon.svelte';
@@ -25,13 +25,20 @@
 	} from 'lucide-svelte';
 
 	let mounted = false;
+	let BackgroundEffects;
 
 	function navigateToAnimations() {
 		goto('/animations');
 	}
 
-	onMount(() => {
+	onMount(async () => {
 		mounted = true;
+
+		// Lazy load BackgroundEffects to improve initial page load
+		const { default: BackgroundEffectsComponent } = await import(
+			'$lib/components/BackgroundEffects.svelte'
+		);
+		BackgroundEffects = BackgroundEffectsComponent;
 	});
 </script>
 
@@ -45,7 +52,9 @@
 
 <div class="relative min-h-screen bg-gray-900">
 	<!-- Background Effects -->
-	<BackgroundEffects />
+	{#if BackgroundEffects}
+		<svelte:component this={BackgroundEffects} />
+	{/if}
 
 	<!-- Simple header navigation -->
 	<nav class="relative z-50 border-b border-gray-700 bg-gray-800/95 backdrop-blur-sm">

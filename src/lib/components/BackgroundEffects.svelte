@@ -6,41 +6,31 @@
 	let stars = [];
 
 	onMount(() => {
-		// Reducir significativamente los elementos para mejor rendimiento
-		// Create fewer floating sparkles
-		for (let i = 0; i < 5; i++) {
+		// Minimal elements for maximum performance
+		// Create only 3 floating sparkles
+		for (let i = 0; i < 3; i++) {
 			sparkles.push({
 				id: i,
 				x: Math.random() * 100,
 				y: Math.random() * 100,
 				delay: Math.random() * 2,
-				size: 12
+				size: 10
 			});
 		}
 
-		// Create fewer floating stars
-		for (let i = 0; i < 3; i++) {
+		// Create only 2 floating stars
+		for (let i = 0; i < 2; i++) {
 			stars.push({
 				id: i,
 				x: Math.random() * 100,
 				y: Math.random() * 100,
 				delay: Math.random() * 3,
-				size: 8
+				size: 6
 			});
 		}
 
-		// Reducir frecuencia de actualización para menos carga en CPU
-		const sparkleInterval = setInterval(() => {
-			const randomSparkle = sparkles[Math.floor(Math.random() * sparkles.length)];
-			if (randomSparkle) {
-				randomSparkle.x = Math.random() * 100;
-				randomSparkle.y = Math.random() * 100;
-			}
-		}, 8000); // Cambiado de 3s a 8s
-
-		return () => {
-			clearInterval(sparkleInterval);
-		};
+		// Remove interval to prevent continuous DOM updates
+		// Static positions for better performance
 	});
 </script>
 

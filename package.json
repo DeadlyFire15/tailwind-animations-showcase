@@ -1,7 +1,7 @@
 {
 	"name": "tailwind-animations-showcase",
 	"private": false,
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "🎨 A comprehensive Tailwind CSS animations library with 80+ animations for React, Vue, Svelte, Angular & Vanilla JS",
 	"type": "module",
 	"main": "plugin.js",

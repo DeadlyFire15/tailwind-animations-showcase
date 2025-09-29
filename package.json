@@ -1,0 +1,70 @@
+{
+	"name": "tailwind-animations-showcase",
+	"private": false,
+	"version": "1.0.0",
+	"description": "A comprehensive showcase of Tailwind CSS animations with examples for multiple frameworks",
+	"type": "module",
+	"main": "plugin.js",
+	"files": [
+		"plugin.js",
+		"README.md",
+		"LICENSE"
+	],
+	"keywords": [
+		"tailwindcss",
+		"animations",
+		"css",
+		"svelte",
+		"react",
+		"vue",
+		"angular",
+		"showcase",
+		"plugin"
+	],
+	"author": "Your Name",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/DeadlyFire15/tailwind-animations-showcase"
+	},
+	"homepage": "https://tailwind-animations-showcase.vercel.app",
+	"bugs": {
+		"url": "https://github.com/DeadlyFire15/tailwind-animations-showcase/issues"
+	},
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build",
+		"preview": "vite preview",
+		"prepare": "svelte-kit sync || echo ''",
+		"format": "prettier --write .",
+		"lint": "prettier --check .",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json --watch",
+		"test": "npm run lint && npm run check",
+		"release": "npm run test && npm run build",
+		"publish-package": "npm run release && npm publish"
+	},
+	"dependencies": {
+		"lucide-svelte": "^0.447.0",
+		"prismjs": "^1.29.0"
+	},
+	"devDependencies": {
+		"@sveltejs/adapter-auto": "^6.0.0",
+		"@sveltejs/kit": "^2.22.0",
+		"@sveltejs/vite-plugin-svelte": "^6.0.0",
+		"@tailwindcss/typography": "^0.5.15",
+		"@tailwindcss/vite": "^4.0.0",
+		"@types/prismjs": "^1.26.4",
+		"prettier": "^3.4.2",
+		"prettier-plugin-svelte": "^3.3.3",
+		"prettier-plugin-tailwindcss": "^0.6.11",
+		"svelte": "^5.0.0",
+		"tailwindcss": "^4.0.0",
+		"vite": "^7.0.4"
+	},
+	"pnpm": {
+		"onlyBuiltDependencies": [
+			"esbuild"
+		]
+	}
+}

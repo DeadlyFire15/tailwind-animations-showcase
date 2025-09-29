@@ -1,5 +1,5 @@
 <script>
-	import { Search, Github, BookOpen, Download } from 'lucide-svelte';
+	import { Search, Github, BookOpen, Download, Star, Package } from 'lucide-svelte';
 
 	export let categories = [];
 	export let activeCategory = 'entrance';
@@ -50,16 +50,32 @@
 			</div>
 
 			<!-- Actions -->
-			<div class="flex items-center space-x-4">
+			<div class="flex items-center space-x-3">
+				<!-- GitHub Stars -->
 				<a
-					href="https://tailwindcss.com/docs"
+					href="https://github.com/DeadlyFire15/tailwind-animations-showcase/stargazers"
 					target="_blank"
 					rel="noopener noreferrer"
-					class="text-gray-400 transition-colors hover:text-gray-200"
-					title="Tailwind CSS Docs"
+					class="flex items-center gap-1.5 rounded-lg border border-gray-600 bg-gray-700/50 px-3 py-1.5 text-sm text-gray-300 transition-all hover:border-yellow-500 hover:bg-gray-600/50 hover:text-yellow-400"
+					title="Star on GitHub"
 				>
-					<BookOpen size={20} />
+					<Star size={14} />
+					<span class="hidden sm:inline">Star</span>
 				</a>
+
+				<!-- NPM Package -->
+				<a
+					href="https://www.npmjs.com/package/tailwind-animations-showcase"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="flex items-center gap-1.5 rounded-lg border border-gray-600 bg-gray-700/50 px-3 py-1.5 text-sm text-gray-300 transition-all hover:border-red-500 hover:bg-gray-600/50 hover:text-red-400"
+					title="View on NPM"
+				>
+					<Package size={14} />
+					<span class="hidden sm:inline">NPM</span>
+				</a>
+
+				<!-- GitHub Repository -->
 				<a
 					href="https://github.com/DeadlyFire15/tailwind-animations-showcase"
 					target="_blank"
@@ -69,12 +85,18 @@
 				>
 					<Github size={20} />
 				</a>
+
+				<!-- Install Button -->
 				<button
-					class="flex items-center gap-2 rounded-md bg-blue-600 px-3 py-2 text-sm text-white transition-colors hover:bg-blue-500"
-					title="Download as npm package"
+					class="flex items-center gap-2 rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 px-4 py-2 text-sm font-medium text-white transition-all hover:from-blue-500 hover:to-purple-500 hover:shadow-lg hover:shadow-blue-500/25"
+					title="Install npm package"
+					on:click={() => {
+						navigator.clipboard.writeText('npm i tailwind-animations-showcase');
+						// Opcional: mostrar toast de copiado
+					}}
 				>
 					<Download size={16} />
-					Install
+					<span class="hidden sm:inline">Install</span>
 				</button>
 			</div>
 		</div>

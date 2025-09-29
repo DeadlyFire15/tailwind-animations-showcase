@@ -4,27 +4,32 @@
 
 [![NPM Version](https://img.shields.io/npm/v/tailwind-animations-showcase)](https://www.npmjs.com/package/tailwind-animations-showcase)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
+[![Downloads](https://img.shields.io/npm/dm/tailwind-animations-showcase)](https://www.npmjs.com/package/tailwind-animations-showcase)
+[![Bundle Size](https://img.shields.io/bundlephobia/minzip/tailwind-animations-showcase)](https://bundlephobia.com/package/tailwind-animations-showcase)
 [![GitHub Stars](https://img.shields.io/github/stars/DeadlyFire15/tailwind-animations-showcase?style=social)](https://github.com/DeadlyFire15/tailwind-animations-showcase/stargazers)
+[![GitHub Issues](https://img.shields.io/github/issues/DeadlyFire15/tailwind-animations-showcase)](https://github.com/DeadlyFire15/tailwind-animations-showcase/issues)
+[![GitHub Forks](https://img.shields.io/github/forks/DeadlyFire15/tailwind-animations-showcase?style=social)](https://github.com/DeadlyFire15/tailwind-animations-showcase/network/members)
 
-Una colección completa y de código abierto de hermosas animaciones de Tailwind CSS con ejemplos de código listos para usar en **React**, **Vue**, **Svelte**, **Angular** y **JavaScript vanilla**.
+🚀 A comprehensive and open-source collection of beautiful Tailwind CSS animations with ready-to-use code examples for **React**, **Vue**, **Svelte**, **Angular**, and **Vanilla JavaScript**.
 
-[Demo en Vivo](https://tailwind-animations-showcase.vercel.app) • [Documentación](https://github.com/DeadlyFire15/tailwind-animations-showcase) • [Contribuir](CONTRIBUTING.md)
+[🌟 Live Demo](https://tailwind-animations-showcase.vercel.app) • [📖 Documentation](https://github.com/DeadlyFire15/tailwind-animations-showcase) • [🤝 Contributing](CONTRIBUTING.md) • [💝 Sponsor](https://github.com/sponsors/DeadlyFire15)
 
 </div>
 
-## ✨ Características
+## ✨ Features
 
-- 🎯 **100+ Animaciones Listas** - Entrada, salida, atención, hover y más
-- 🚀 **Soporte Multi-Framework** - Funciona con React, Vue, Svelte, Angular y JS vanilla
-- 📱 **Diseño Responsivo** - Todas las animaciones funcionan perfectamente en dispositivos móviles
-- 🎨 **Copiar y Pegar Código** - Copiado con un clic para implementación rápida
-- 📚 **Documentación Completa** - Ejemplos detallados y guías de personalización
-- 🔧 **Personalizable** - Fácil modificación de timing, easing y otras propiedades
-- 🌙 **Optimizado para Rendimiento** - Animaciones CSS aceleradas por hardware
-- 📦 **Paquete NPM** - Instala como plugin de Tailwind
-- 🎨 **Interfaz Moderna** - Diseño elegante con tema oscuro
-- 🔍 **Búsqueda Inteligente** - Encuentra animaciones rápidamente
+- 🎯 **80+ Ready-to-Use Animations** - Attention, fading, bouncing, sliding, zooming, rotating, and loading animations
+- 🚀 **Multi-Framework Support** - Works seamlessly with React, Vue, Svelte, Angular, and Vanilla JavaScript
+- 📱 **Mobile Responsive** - All animations work perfectly on mobile devices
+- 🎨 **One-Click Copy** - Copy and paste code with a single click for rapid implementation
+- 📚 **Complete Documentation** - Detailed examples and customization guides
+- 🔧 **Highly Customizable** - Easy modification of timing, easing, and other properties
+- ⚡ **Performance Optimized** - Hardware-accelerated CSS animations for smooth performance
+- 📦 **NPM Package** - Install as a Tailwind plugin or standalone utility
+- � **Modern UI** - Beautiful dark theme interface with live previews
+- 🔍 **Smart Search** - Find animations quickly with intelligent filtering
+- 🎨 **Consistent Design** - All animations follow design system principles
+- 📝 **TypeScript Support** - Full TypeScript definitions included
 
 ## 🚀 Inicio Rápido
 
@@ -33,14 +38,14 @@ Una colección completa y de código abierto de hermosas animaciones de Tailwind
 #### Como Plugin de Tailwind (Recomendado)
 
 ```bash
-npm install tailwind-animations-showcase
-# o
+npm i tailwind-animations-showcase
+# or
 yarn add tailwind-animations-showcase
-# o
+# or
 pnpm add tailwind-animations-showcase
 ```
 
-Agrega a tu `tailwind.config.js`:
+Add to your `tailwind.config.js`:
 
 ```javascript
 /** @type {import('tailwindcss').Config} */

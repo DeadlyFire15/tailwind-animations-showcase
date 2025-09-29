@@ -1,0 +1,50 @@
+# Development files
+.svelte-kit/
+.vscode/
+node_modules/
+.env
+.env.*
+
+# Build files
+build/
+dist/
+.output/
+
+# Source files not needed in package
+src/routes/
+src/app.html
+src/app.css
+static/
+
+# Configuration files
+vite.config.js
+svelte.config.js
+tailwind.config.js
+jsconfig.json
+components.json
+vercel.json
+
+# Documentation that's not needed in npm
+.github/
+docs/
+*.md
+!README.md
+!LICENSE
+
+# Development tools
+.prettierrc
+.prettierignore
+.gitignore
+pnpm-lock.yaml
+package-lock.json
+yarn.lock
+
+# Testing
+tests/
+test/
+*.test.js
+*.spec.js
+
+# Misc
+.DS_Store
+Thumbs.db

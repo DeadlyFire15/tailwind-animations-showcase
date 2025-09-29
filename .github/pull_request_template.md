@@ -4,7 +4,6 @@ about: Contribute to the project
 title: ''
 labels: ''
 assignees: ''
-
 ---
 
 ## 📝 Description
@@ -14,18 +13,18 @@ Brief description of what this PR does.
 ## 🎯 Type of Change
 
 - [ ] 🐛 Bug fix (non-breaking change which fixes an issue)
-- [ ] ✨ New animation (non-breaking change which adds functionality)  
+- [ ] ✨ New animation (non-breaking change which adds functionality)
 - [ ] 💥 Breaking change (fix or feature that would cause existing functionality to not work as expected)
 - [ ] 📚 Documentation update
 - [ ] 🔧 Refactoring/Code improvement
 
 ## 🎨 Animation Details (if applicable)
 
-- **Name**: 
-- **Category**: 
-- **Duration**: 
-- **Easing**: 
-- **Properties used**: 
+- **Name**:
+- **Category**:
+- **Duration**:
+- **Easing**:
+- **Properties used**:
 
 ## ✅ Checklist
 
@@ -43,7 +42,7 @@ Brief description of what this PR does.
 Describe how you tested your changes:
 
 - [ ] Chrome
-- [ ] Firefox  
+- [ ] Firefox
 - [ ] Safari
 - [ ] Edge
 - [ ] Mobile (iOS/Android)

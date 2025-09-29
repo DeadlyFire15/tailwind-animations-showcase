@@ -2,32 +2,66 @@
 	"name": "tailwind-animations-showcase",
 	"private": false,
 	"version": "1.0.0",
-	"description": "A comprehensive showcase of Tailwind CSS animations with examples for multiple frameworks",
+	"description": "🎨 A comprehensive Tailwind CSS animations library with 80+ animations for React, Vue, Svelte, Angular & Vanilla JS",
 	"type": "module",
 	"main": "plugin.js",
+	"module": "plugin.js",
+	"types": "index.d.ts",
+	"exports": {
+		".": {
+			"types": "./index.d.ts",
+			"import": "./plugin.js",
+			"require": "./plugin.js"
+		},
+		"./animations": {
+			"types": "./index.d.ts",
+			"import": "./src/lib/animations/index.js"
+		},
+		"./utils": {
+			"types": "./index.d.ts",
+			"import": "./src/lib/utils/animationHelpers.js"
+		}
+	},
 	"files": [
 		"plugin.js",
+		"index.d.ts",
+		"src/lib/animations/",
+		"src/lib/utils/",
 		"README.md",
 		"LICENSE"
 	],
 	"keywords": [
 		"tailwindcss",
+		"tailwind-plugin",
+		"css-animations",
 		"animations",
+		"keyframes",
 		"css",
 		"svelte",
 		"react",
 		"vue",
 		"angular",
-		"showcase",
-		"plugin"
+		"javascript",
+		"frontend",
+		"ui-library",
+		"web-animations",
+		"motion",
+		"transitions",
+		"effects"
 	],
-	"author": "Your Name",
+	"author": {
+		"name": "DeadlyFire15",
+		"url": "https://github.com/DeadlyFire15"
+	},
 	"license": "MIT",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/DeadlyFire15/tailwind-animations-showcase"
 	},
 	"homepage": "https://tailwind-animations-showcase.vercel.app",
+	"npm": {
+		"url": "https://www.npmjs.com/package/tailwind-animations-showcase"
+	},
 	"bugs": {
 		"url": "https://github.com/DeadlyFire15/tailwind-animations-showcase/issues"
 	},
@@ -40,9 +74,14 @@
 		"lint": "prettier --check .",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json --watch",
-		"test": "npm run lint && npm run check",
-		"release": "npm run test && npm run build",
-		"publish-package": "npm run release && npm publish"
+		"test": "npm run lint",
+		"prepublishOnly": "npm run test",
+		"version": "npm run format && git add -A",
+		"postversion": "git push && git push --tags",
+		"release:patch": "npm version patch",
+		"release:minor": "npm version minor",
+		"release:major": "npm version major",
+		"publish:npm": "npm publish --access public"
 	},
 	"dependencies": {
 		"lucide-svelte": "^0.447.0",

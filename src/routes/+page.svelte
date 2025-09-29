@@ -63,15 +63,14 @@
 					>
 						View Animations
 					</a>
-					<a
-						href="https://github.com/DeadlyFire15/tailwind-animations-showcase"
-						target="_blank"
-						rel="noopener noreferrer"
-						class="text-gray-400 transition-colors hover:text-gray-200"
-						title="GitHub Repository"
-					>
-						<Code size={20} />
-					</a>
+					<iframe
+						src="https://ghbtns.com/github-btn.html?user=deadlyfire15&repo=tailwind-animations-showcase&type=star&count=true&size=large"
+						frameborder="0"
+						scrolling="0"
+						width="150"
+						height="30"
+						title="GitHub"
+					></iframe>
 				</div>
 			</div>
 		</div>
@@ -342,7 +341,9 @@
 								<div class="flex items-center justify-between rounded-lg bg-gray-900 p-4">
 									<div class="flex items-center gap-3">
 										<Terminal class="h-4 w-4 text-gray-400" />
-										<code class="text-sm text-green-400">npm install tailwind-animations</code>
+										<code class="text-sm text-green-400"
+											>npm install tailwind-animations-showcase</code
+										>
 									</div>
 									<button
 										class="rounded-md bg-gray-700 p-2 text-gray-400 transition-colors hover:bg-gray-600 hover:text-white"
@@ -358,7 +359,9 @@
 								<div class="flex items-center justify-between rounded-lg bg-gray-900 p-4">
 									<div class="flex items-center gap-3">
 										<Terminal class="h-4 w-4 text-gray-400" />
-										<code class="text-sm text-yellow-400">pnpm add tailwind-animations</code>
+										<code class="text-sm text-yellow-400"
+											>pnpm add tailwind-animations-showcase</code
+										>
 									</div>
 									<button
 										class="rounded-md bg-gray-700 p-2 text-gray-400 transition-colors hover:bg-gray-600 hover:text-white"
@@ -373,7 +376,7 @@
 								<div class="flex items-center justify-between rounded-lg bg-gray-900 p-4">
 									<div class="flex items-center gap-3">
 										<Terminal class="h-4 w-4 text-gray-400" />
-										<code class="text-sm text-blue-400">yarn add tailwind-animations</code>
+										<code class="text-sm text-blue-400">yarn add tailwind-animations-showcase</code>
 									</div>
 									<button
 										class="rounded-md bg-gray-700 p-2 text-gray-400 transition-colors hover:bg-gray-600 hover:text-white"

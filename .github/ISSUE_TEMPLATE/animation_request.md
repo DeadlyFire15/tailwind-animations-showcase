@@ -4,7 +4,6 @@ about: Suggest a new animation for this project
 title: '[ANIMATION] '
 labels: enhancement, animation
 assignees: ''
-
 ---
 
 **Animation Name**
@@ -12,8 +11,9 @@ What would you like to call this animation?
 
 **Category**
 Which category does this animation belong to?
+
 - [ ] Entrance
-- [ ] Exit  
+- [ ] Exit
 - [ ] Attention
 - [ ] Hover
 - [ ] Loading
@@ -31,6 +31,7 @@ Explain when and why someone would use this animation.
 Provide links to examples or inspiration (if any).
 
 **Technical Details**
+
 - Duration: [e.g. 0.5s]
 - Easing: [e.g. ease-out, ease-in-out]
 - Properties: [e.g. transform, opacity]
